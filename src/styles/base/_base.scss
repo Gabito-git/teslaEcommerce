@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+
+// body::-webkit-scrollbar {
+//     display: none;
+// }
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1200px) {
+        width: 122rem;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+.error{
+    color: red;
+    font-size: 1.3rem;
+}
+
+.opacity-0{
+    opacity: 0;
+    cursor: unset;
+}

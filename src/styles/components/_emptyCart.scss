@@ -1,0 +1,22 @@
+.empty-cart{
+    text-align: center;
+    padding: 0 1.3rem;
+    width: 100%;
+    border-top: $border-separator;
+    border-bottom: $border-separator;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+
+    p{
+        // margin-right: 7rem;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+    }
+}

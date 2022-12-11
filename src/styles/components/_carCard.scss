@@ -1,0 +1,68 @@
+.carcard{
+
+    border-top: $border-separator;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    // margin-bottom: 2rem;
+    padding: 3rem 4rem 3rem 0;
+    position: relative;
+
+    &__img-field{
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 6px;
+        overflow: hidden;
+
+        @include responsive($small){
+            width: 19.2rem;
+            height: 19.2rem;
+        }
+
+        img{
+            max-width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
+
+    &__data{
+        flex: 1;
+        font-size: 1.4rem;
+        
+        & > *{
+            margin-bottom: 0.7rem;
+        }
+
+        &--desc{
+            position: absolute;
+            font-size: 1.4rem;
+            color: $text-color;
+            line-height: 1.8rem;
+        }
+    }
+
+    &__select, &__close{
+        position: absolute;
+        top:1rem;  
+    }
+
+    &__select{
+        left: 85%;
+        
+        select{
+            border: none;
+            border: $border-separator;
+            
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__close{
+        cursor: pointer;
+        left: 93%;
+        font-size: 2.2rem;
+    }
+}

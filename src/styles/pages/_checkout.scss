@@ -1,0 +1,157 @@
+.checkout{
+  padding: 7rem 1.5rem;
+
+  @include responsive($large){
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 7rem 0 0 0;
+  }
+
+  &__lateral, &__form{
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  &__lateral{
+    background-color: rgb(249 250 251);
+    display: flex;
+    flex-direction: column;
+
+    @include responsive($large){
+      justify-content: space-between;
+      flex-basis: 45rem;
+      margin: 0; 
+      padding: 2rem;   
+    }
+  }
+
+  &__products-cart{
+    display: none;
+
+    @include responsive($large){
+      display: block;
+      flex: 1;
+
+    }
+  }
+
+  &__text{
+    flex-basis: 5rem;
+  }
+
+  &__yourorder{
+    padding-bottom: 3rem;
+
+    h2{
+      font-size: 1.8rem;
+    }
+
+    @include responsive($large){
+      display: none;
+    }
+  }
+
+  &__total{
+    display: flex;
+    justify-content: space-between;
+    border-top: $border-separator;
+    padding: 2rem 0;
+    font-size: 1.7rem;
+  }
+
+  &__form{
+    padding-top: 10rem;
+
+    @include responsive($large){
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      margin: 0;
+      max-width: 100%;
+      padding: 2rem 0 0 0;
+    }
+  }
+
+  &__form-content{
+    @include responsive($large){
+      width: 50rem;
+    }
+  }
+
+  &__text-input{
+
+    margin-bottom: 2rem;
+
+    label{
+      font-size: 1.4rem;
+    }
+
+    input{
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: $border-separator;
+      padding: 1.5rem 1rem;
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  &__field-1{
+    display: flex;
+    justify-content: space-between;
+
+    & > *:first-child{
+      flex:1;
+    }
+
+    & > *:last-child{
+      flex-basis: 25%;
+    }
+  }
+
+  &__field-2{
+    @include responsive($small){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__checkbox-field{
+    align-items: center;
+    display: flex;
+    font-size: 1.4rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__button{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  &__carcard{
+
+    border: none;
+    padding: 0;
+    margin-bottom: 2.6rem;
+
+    &__data{
+      &--desc{
+        top: 5rem;
+        left: 18rem;
+      }
+    }
+
+    &__img-field{
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+}

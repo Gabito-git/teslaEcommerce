@@ -1,0 +1,69 @@
+.section{
+    scroll-snap-align: start;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding-top: 11rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__text{
+        text-align: center;
+        z-index: 0;
+    }
+
+    &__title{
+        font-size: 3.5rem;
+    }
+
+    &__subtitle{
+        font-size: 1.6rem;
+    }
+
+    &__buttons{
+        padding-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        @include responsive($medium){
+            width: 52rem;
+            flex-direction: row;
+        }
+    }
+
+    &__button{
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 1.3rem 0;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+        width: 25rem;
+
+        &:focus{
+            outline: none;
+        }
+
+        &--left{
+            background-color: rgba(0,0,0, 0.6)
+        }
+
+        &--right{
+            background-color: lighten(lightgrey, 10%);
+            color: black;
+        }
+    }
+
+    &__arrow-down{
+        font-size: 2.7rem;
+        color: white;
+        animation: bounce 3s infinite;
+    }
+}

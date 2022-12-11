@@ -1,0 +1,99 @@
+.order{
+  padding-top: 7rem;
+
+  @include responsive($small){
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 10rem;
+  }
+
+  @include responsive($large){
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  &__top{
+    padding: 0rem 1.5rem;
+    margin-bottom: 5rem;
+
+    h2{
+      font-size: 2.3rem;
+
+      @include responsive($small){
+        font-size: 3rem;
+      }
+    }
+
+    p{
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: $text-color;
+      margin-top: 1.4rem;
+    }
+  }
+
+  &__bottom{
+    border-top: $border-separator;
+    border-bottom: $border-separator;
+  }
+
+  &__data{
+    padding: 2rem;
+    display: flex;
+    font-size: 1.4rem;
+
+    & > *{
+      flex: 1;
+    }
+  }
+
+  &__top-text-line{
+    margin-bottom: 1rem;
+  }
+
+  &__products{
+    padding: 1.5rem;
+  }
+
+  &__product-item{
+    border-top: none;
+    padding-top: 1.5rem;
+
+    &__img-field{
+      width: 11rem;
+      width: 11rem;
+
+      @include responsive($small){
+        width: 16rem;
+        height: 16rem;
+      }
+    }
+
+    &__data{
+      &--desc{
+        left: 21rem;
+        top: 7rem;
+
+        @include responsive($small){
+          left: 18rem;
+        }
+      }
+    }
+
+    &__quantity{
+
+      position: absolute;
+      top: 8rem;
+      left: 13rem;
+
+      @include responsive($small){
+        left: 18rem;
+        top: 12rem;
+      }
+
+      p{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
